@@ -1,0 +1,137 @@
+/* Global styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header styles */
+header {
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+}
+
+/* Main styles */
+main {
+    padding: 20px;
+}
+
+/* Featured Jobs section styles */
+#home {
+    margin-bottom: 20px;
+}
+
+#home h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+#home ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#home li {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+/* Job Listings section styles */
+#job-listings ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#job-listings li {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+#job-listings button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+#job-listings button:hover {
+    background-color: #0056b3;
+}
+
+/* Employer Dashboard section styles */
+#employer-dashboard {
+    margin-bottom: 20px;
+}
+
+#employer-dashboard h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+#employer-dashboard .dashboard-content {
+    display: flex;
+    justify-content: space-between;
+}
+
+#employer-dashboard .dashboard-content div {
+    width: 48%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#employer-dashboard button {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+#employer-dashboard button:hover {
+    background-color: #218838;
+}
+
+/* Candidate Dashboard section styles */
+#candidate-dashboard {
+    margin-bottom: 20px;
+}
+
+#candidate-dashboard h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+#candidate-dashboard .dashboard-content {
+    display: flex;
+    justify-content: space-between;
+}
+
+#candidate-dashboard .dashboard-content div {
+    width: 48%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#candidate-dashboard button {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+#candidate-dashboard button:hover {
+    background-color: #c82333;
+}

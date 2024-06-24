@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Landing Page</title>
+    <style>
+            /* Reset and basic styling */
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+    
+            body {
+                font-family: Arial, sans-serif;
+                line-height: 1.6;
+                background-color: #fff5e6; /* Light warm background */
+            }
+    
+            .container {
+                max-width: 1200px;
+                margin: 0 auto;
+                padding: 0 20px;
+            }
+    
+            /* Header */
+            .header {
+                background-color: #b35e00; /* Warm dark orange */
+                color: #fff;
+                padding: 15px 0;
+            }
+    
+            .navbar {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+    
+            .logo {
+                font-size: 1.5rem;
+                font-weight: bold;
+                text-decoration: none;
+                color: #fff;
+            }
+    
+            .nav-links {
+                list-style-type: none;
+                display: flex;
+            }
+    
+            .nav-links li {
+                margin-right: 20px;
+            }
+    
+            .nav-links a {
+                color: #fff;
+                text-decoration: none;
+                transition: color 0.3s ease;
+            }
+    
+            .nav-links a:hover {
+                color: #ffe5cc;
+            }
+    
+            /* Hero section */
+            .hero {
+                background-image: url('images/hero-background.jpg');
+                background-size: cover;
+                background-position: center;
+                color: #fff;
+                text-align: center;
+                padding: 100px 0;
+            }
+    
+            .hero {
+                background-image: url('images/hero-background.jpg');
+                background-size: cover;
+                background-position: center;
+                color: #fff;
+                text-align: center;
+                padding: 100px 0;
+            }
+    
+            .hero h1 {
+                font-size: 3rem;
+                margin-bottom: 20px;
+                color: black; /* Change text color to black */
+            }
+    
+            .hero p {
+                font-size: 1.2rem;
+                margin-bottom: 30px;
+                color: black; /* Change text color to black */
+            }
+    
+            .btn {
+                display: inline-block;
+                background-color: #ff6600; /* Warm orange */
+                color: #fff;
+                text-decoration: none;
+                font-size: 1rem;
+                padding: 10px 20px;
+                border-radius: 5px;
+                transition: background-color 0.3s ease;
+            }
+    
+            .btn:hover {
+                background-color: #cc5200;
+            }
+    
+            /* Features section */
+            .features {
+                padding: 80px 0;
+                background-color: #fff0e6; /* Light warm peach */
+            }
+    
+            .features h2 {
+                text-align: center;
+                margin-bottom: 40px;
+            }
+    
+            .feature {
+                display: flex;
+                justify-content: space-around;
+            }
+    
+            .feature-item {
+                text-align: center;
+                margin-bottom: 40px;
+            }
+    
+            .feature-item img {
+                width: 150px;
+                height: 150px;
+                object-fit: cover;
+                border-radius: 50%;
+            }
+    
+            /* Services section */
+            .services {
+                background-color: #ffe5cc; /* Warm light peach */
+                padding: 80px 0;
+            }
+    
+            .services h2 {
+                text-align: center;
+                margin-bottom: 40px;
+            }
+    
+            .service {
+                display: flex;
+                justify-content: space-around;
+            }
+    
+            .service-item {
+                text-align: center;
+                margin-bottom: 40px;
+            }
+    
+            .service-item img {
+                width: 150px;
+                height: 150px;
+                object-fit: cover;
+                border-radius: 5px;
+            }
+    
+            /* Portfolio section */
+            .portfolio {
+                padding: 80px 0;
+                background-color: #fff0e6; /* Light warm peach */
+            }
+    
+            .portfolio h2 {
+                text-align: center;
+                margin-bottom: 40px;
+            }
+    
+            .portfolio-items {
+                display: flex;
+                justify-content: space-around;
+                flex-wrap: wrap;
+            }
+    
+            .portfolio-item {
+                text-align: center;
+                margin-bottom: 40px;
+                flex: 0 0 calc(33.33% - 20px);
+                max-width: calc(33.33% - 20px);
+            }
+    
+            .portfolio-item img {
+                width: 100%;
+                height: auto;
+                object-fit: cover;
+                border-radius: 5px;
+            }
+    
+            /* Contact section */
+            .contact {
+                padding: 80px 0;
+                background-color: #b35e00; /* Warm dark orange */
+                color: #fff;
+            }
+    
+            .contact h2 {
+                text-align: center;
+                margin-bottom: 40px;
+            }
+    
+            .contact-form {
+                max-width: 600px;
+                margin: 0 auto;
+            }
+    
+            .contact-form input,
+            .contact-form textarea {
+                width: 100%;
+                padding: 10px;
+                margin-bottom: 20px;
+                border: 1px solid #555;
+                border-radius: 5px;
+                font-size: 1rem;
+            }
+    
+            .contact-form input[type="submit"] {
+                background-color: #ff6600; /* Warm orange */
+                color: #fff;
+                border: none;
+                cursor: pointer;
+                transition: background-color 0.3s ease;
+            }
+    
+            .contact-form input[type="submit"]:hover {
+                background-color: #cc5200;
+            }
+    
+            /* Footer */
+            .footer {
+                background-color: #cc5200; /* Warm dark orange */
+                color: #fff;
+                padding: 40px 0;
+                text-align: center;
+            }
+    
+            .footer .footer-top {
+                display: flex;
+                justify-content: space-between;
+                flex-wrap: wrap;
+                margin-bottom: 40px;
+            }
+    
+            .footer .footer-top .footer-brand {
+                flex: 1;
+                margin-bottom: 20px;
+            }
+    
+            .footer .footer-top .footer-brand p {
+                font-size: 1.2rem;
+            }
+    
+            .footer .footer-top .social-list {
+                list-style-type: none;
+                display: flex;
+            }
+    
+            .footer .footer-top .social-list li {
+                margin-right: 10px;
+            }
+    
+            .footer .footer-top .social-list a {
+                color: #fff;
+                font-size: 1.5rem;
+                transition: color 0.3s ease;
+            }
+    
+            .footer .footer-top .social-list a:hover {
+                color: #ff6600;
+            }
+    
+            .footer .footer-list {
+                list-style-type: none;
+                margin-bottom: 20px;
+                flex: 1;
+            }
+    
+            .footer .footer-list .footer-list-title {
+                font-size: 1.2rem;
+                margin-bottom: 10px;
+            }
+    
+            .footer .footer-list a {
+                color: #fff;
+                text-decoration: none;
+                margin-bottom: 10px;
+                display: block;
+                transition: color 0.3s ease;
+            }
+    
+            .footer .footer-list a:hover {
+                color: #ff6600;
+            }
+    
+            .footer-bottom {
+                border-top: 1px solid #444;
+                padding-top: 20px;
+            }
+    
+            .footer-bottom p {
+                margin-bottom: 10px;
+            }
+    
+            .footer-bottom .footer-bottom-list {
+                list-style-type: none;
+                display: flex;
+                justify-content: center;
+            }
+    
+            .footer-bottom .footer-bottom-list li {
+                margin-right: 20px;
+            }
+    
+            .footer-bottom .footer-bottom-list a {
+                color: #fff;
+                text-decoration: none;
+                transition: color 0.3s ease;
+            }
+    
+            .footer-bottom .footer-bottom-list a:hover {
+                color: #ff6600;
+            }
+    
+            /* Back to top button */
+            .back-to-top {
+                position: fixed;
+                bottom: 20px;
+                right: 20px;
+                background-color: #ff6600; /* Warm orange */
+                color: #fff;
+                padding: 10px;
+                border-radius: 50%;
+                display: none;
+                transition: background-color 0.3s ease;
+                z-index: 1000;
+            }
+    
+            .back-to-top.active {
+                display: block;
+            }
+    
+            .back-to-top:hover {
+                background-color: #cc5200;
+            }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <div class="container">
+                <a href="#" class="logo"><img src="images/logo.png" alt="Logo"></a>
+                <ul class="nav-links">
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <section id="hero" class="hero">
+        <div class="container">
+            <h1>Welcome to Our Advanced Landing Page</h1>
+            <p>A showcase of our expertise in web development.</p>
+            <a href="#services" class="btn">Learn More</a>
+        </div>
+    </section>
+
+    <section id="features" class="features">
+        <div class="container">
+            <h2>Key Features</h2>
+            <div class="feature">
+                <div class="feature-item">
+                    <img src="images/feature-1.png" alt="Feature 1 Icon">
+                    <h3>Responsive Design</h3>
+                    <p>Our websites are designed to be fully responsive, ensuring a seamless experience on any device.</p>
+                </div>
+                <div class="feature-item">
+                    <img src="images/feature-2.png" alt="Feature 2 Icon">
+                    <h3>High Performance</h3>
+                    <p>We optimize our sites for speed and efficiency, providing fast load times and smooth operation.</p>
+                </div>
+                <div class="feature-item">
+                    <img src="images/feature-3.png" alt="Feature 3 Icon">
+                    <h3>SEO Friendly</h3>
+                    <p>Our development practices prioritize search engine optimization to enhance your online visibility.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="services">
+        <div class="container">
+            <h2>Our Services</h2>
+            <div class="service">
+                <div class="service-item">
+                    <img src="images/service-1.png" alt="Service 1 Icon">
+                    <h3>Web Development</h3>
+                    <p>We create custom websites tailored to your business needs using the latest technologies.</p>
+                </div>
+                <div class="service-item">
+                    <img src="images/service-2.png" alt="Service 2 Icon">
+                    <h3>Mobile App Development</h3>
+                    <p>Our team develops user-friendly mobile apps for both iOS and Android platforms.</p>
+                </div>
+                <div class="service-item">
+                    <img src="images/service-3.png" alt="Service 3 Icon">
+                    <h3>Digital Marketing</h3>
+                    <p>We provide comprehensive digital marketing services to help you reach your target audience.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="portfolio" class="portfolio">
+        <div class="container">
+            <h2>Portfolio</h2>
+            <div class="portfolio-items">
+                <div class="portfolio-item">
+                    <img src="images/portfolio-1.png" alt="Portfolio 1">
+                    <h3>E-Commerce Platform</h3>
+                    <p>A robust e-commerce platform designed to handle high traffic and transactions seamlessly.</p>
+                </div>
+                <div class="portfolio-item">
+                    <img src="images/portfolio-2.png" alt="Portfolio 2">
+                    <h3>Business Website</h3>
+                    <p>A professional business website tailored to showcase the company's services and expertise.</p>
+                </div>
+                <div class="portfolio-item">
+                    <img src="images/portfolio-3.png" alt="Portfolio 3">
+                    <h3>Mobile App</h3>
+                    <p>A user-friendly mobile app with a sleek design and intuitive navigation for enhanced user experience.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <form action="#" class="contact-form">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+                <button type="submit" class="btn btn-primary">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Your Company. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <a href="#hero" class="back-to-top">Back to Top</a>
+
+    <script>
+        // JavaScript for back-to-top button
+        const backToTopButton = document.querySelector('.back-to-top');
+
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 100) {
+                backToTopButton.classList.add('active');
+            } else {
+                backToTopButton.classList.remove('active');
+            }
+        });
+
+        backToTopButton.addEventListener('click', (e) => {
+            e.preventDefault();
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    </script>
+</body>
+</html>

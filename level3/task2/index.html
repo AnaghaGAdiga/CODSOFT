@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Management Tool</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Project Management Tool</h1>
+    </header>
+
+    <main>
+        <section id="projects">
+            <h2>Projects</h2>
+            <div id="projectList">
+                <!-- Projects will be dynamically added here -->
+            </div>
+            <button onclick="openProjectForm()">Create New Project</button>
+        </section>
+
+        <section id="tasks">
+            <h2>Tasks for Selected Project</h2>
+            <div id="taskList">
+                <!-- Tasks will be dynamically added here -->
+            </div>
+            <button onclick="openTaskForm()">Add New Task</button>
+        </section>
+    </main>
+
+    <div id="projectFormModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeProjectForm()">&times;</span>
+            <h2>Create New Project</h2>
+            <form id="projectForm">
+                <label for="projectName">Project Name:</label>
+                <input type="text" id="projectName" required>
+                <label for="projectDeadline">Deadline:</label>
+                <input type="date" id="projectDeadline" required>
+                <button type="submit">Create Project</button>
+            </form>
+        </div>
+    </div>
+
+    <div id="taskFormModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeTaskForm()">&times;</span>
+            <h2>Add New Task</h2>
+            <form id="taskForm">
+                <label for="taskName">Task Name:</label>
+                <input type="text" id="taskName" required>
+                <label for="taskDeadline">Deadline:</label>
+                <input type="date" id="taskDeadline" required>
+                <label for="taskProject">Assign to Project:</label>
+                <select id="taskProject" required>
+                    <!-- Project options will be dynamically added here -->
+                </select>
+                <button type="submit">Add Task</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
